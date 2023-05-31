@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/virginiaberlose/static/css/main.073c9b0a.css",
+    "main.js": "/virginiaberlose/static/js/main.37f0c33a.js",
+    "static/js/787.559594ca.chunk.js": "/virginiaberlose/static/js/787.559594ca.chunk.js",
+    "static/media/logo.svg": "/virginiaberlose/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/virginiaberlose/index.html",
+    "main.073c9b0a.css.map": "/virginiaberlose/static/css/main.073c9b0a.css.map",
+    "main.37f0c33a.js.map": "/virginiaberlose/static/js/main.37f0c33a.js.map",
+    "787.559594ca.chunk.js.map": "/virginiaberlose/static/js/787.559594ca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.37f0c33a.js"
+  ]
+}
