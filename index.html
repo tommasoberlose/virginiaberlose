@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dott.ssa Virginia Berlose - Psicologa e Specialista in Neuropsicologia</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter & Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Material Symbols (Rounded) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- Stili personalizzati -->
+    <style>
+        :root {
+            --cream: #FDFBF5;
+            --background-alt: #F9EBE4;
+            --text-dark: #5C4033;
+
+            --primary-lightest: #FDF4F0;
+            --primary-light: #FADCD0;
+            --primary-medium: #E8BBAF;
+            --primary-dark: #A17C6B;
+            --primary-darker: #8F6859;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+        }
+
+        /* Applica il font Lora ai titoli */
+        h1, h2, h3, .font-lora {
+            font-family: 'Lora', serif;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1), transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-bg {
+            background-color: var(--background-alt);
+            background-image:
+                radial-gradient(circle at 10% 20%, var(--cream) 0%, transparent 40%),
+                radial-gradient(circle at 80% 90%, var(--cream) 0%, transparent 40%);
+        }
+
+        .section-icon {
+            background-color: var(--primary-lightest);
+            color: var(--primary-darker);
+            border-radius: 50%;
+            padding: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+        }
+
+        /* Stile per icone nella timeline */
+        .timeline .section-icon {
+            background-color: #FFFFFF;
+            border: 1px solid var(--primary-light);
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            left: 32px;
+            top: 64px;
+            bottom: -32px;
+            width: 2px;
+            background-color: var(--primary-light);
+        }
+
+        .timeline > .step-card:last-child::before {
+            display: none;
+        }
+
+        .top-bar a:hover {
+            color: var(--primary-dark);
+        }
+
+        .hero-button {
+            background-color: var(--primary-light);
+            border: none;
+            color: var(--text-dark);
+        }
+
+        .material-symbols-rounded {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+
+        .section-bg-gradient {
+            background-image: linear-gradient(180deg, var(--background-alt) 0%, var(--cream) 100%);
+        }
+
+        .section-bg-gradient-inverted {
+            background-image: linear-gradient(180deg, var(--cream) 0%, var(--background-alt) 100%);
+        }
+
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Top Bar di Contatto -->
+    <div class="top-bar sticky top-0 z-50 bg-white/95 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center text-sm text-primary-dark font-medium">
+            <!-- Left Side: Name -->
+            <div>
+                <a href="#" class="font-lora font-bold text-base tracking-wide text-[--primary-darker] hover:text-primary-dark transition-colors duration-300">
+                    Dott.ssa Virginia Berlose
+                </a>
+            </div>
+
+            <!-- Right Side: Contacts -->
+            <div class="flex items-center space-x-6">
+                <a href="#contatti" class="flex items-center space-x-2 transition-colors duration-300">
+                    <span class="material-symbols-rounded">location_on</span>
+                    <span>Dove ricevo</span>
+                </a>
+                <a href="tel:+393466045612" class="flex items-center space-x-2 transition-colors duration-300">
+                    <span class="material-symbols-rounded">call</span>
+                    <span>+39 346 604 5612</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Hero Section -->
+    <header class="hero-bg min-h-[calc(100vh-53px)] flex items-center justify-center p-6 relative overflow-hidden">
+        <div class="text-center max-w-3xl mx-auto z-10 relative">
+            <div class="reveal visible">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-[--primary-darker] mb-4">
+                    Dott.ssa Virginia Berlose
+                </h1>
+                <p class="text-xl md:text-2xl text-primary-darker font-medium mb-8">
+                    Psicologa e specialista in Neuropsicologia | Età Evolutiva e Adulti
+                </p>
+                <p class="max-w-2xl mx-auto text-lg text-text-dark/90 font-medium mb-10">
+                    Uno spazio di ascolto e consulenza per promuovere il benessere psicologico e accompagnarti in un percorso di crescita personale e consapevolezza.
+                </p>
+                <a href="#contatti" class="hero-button inline-block font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Chiedi una consulenza
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Sezione Ambiti di Intervento -->
+        <section id="aree-intervento" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center reveal max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-darker mb-4">Ambiti di Intervento</h2>
+                    <p class="text-lg text-text-dark/90 mb-16">
+                        Il mio lavoro si articola in diversi servizi clinici, pensati per offrire un supporto completo e personalizzato a bambini, adolescenti, adulti e famiglie.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-12 text-left">
+                    <!-- Item 1 -->
+                    <div class="reveal flex items-start space-x-6">
+                        <div class="section-icon flex-shrink-0"><span class="material-symbols-rounded">assignment</span></div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary-darker mb-2">Valutazione Neuropsicologica e Psicodiagnostica</h3>
+                            <p class="text-text-dark">Percorsi per inquadrare il funzionamento cognitivo, emotivo e comportamentale in caso di Disturbi Specifici dell'Apprendimento (DSA), ADHD, disabilità intellettive o altre difficoltà dello sviluppo.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="reveal flex items-start space-x-6" style="transition-delay: 100ms;">
+                        <div class="section-icon flex-shrink-0"><span class="material-symbols-rounded">favorite</span></div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary-darker mb-2">Consulenza e Sostegno Psicologico</h3>
+                            <p class="text-text-dark">Spazio di ascolto per bambini, adolescenti e adulti che affrontano difficoltà emotive (ansia, paure, rabbia), relazionali, scolastiche o momenti di cambiamento e stress.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="reveal flex items-start space-x-6" style="transition-delay: 200ms;">
+                         <div class="section-icon flex-shrink-0"><span class="material-symbols-rounded">trending_up</span></div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary-darker mb-2">Riabilitazione e Potenziamento Cognitivo</h3>
+                            <p class="text-text-dark">Interventi mirati a potenziare le abilità cognitive (attenzione, memoria, funzioni esecutive) e a sviluppare un metodo di studio efficace per superare le difficoltà scolastiche.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="reveal flex items-start space-x-6" style="transition-delay: 300ms;">
+                         <div class="section-icon flex-shrink-0"><span class="material-symbols-rounded">group</span></div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary-darker mb-2">Sostegno alla Genitorialità</h3>
+                            <p class="text-text-dark">Percorsi di Parent Training per supportare i genitori nella gestione dei comportamenti dei figli, migliorare la comunicazione e rafforzare la relazione educativa in famiglia.</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Sezione Il Mio Approccio -->
+        <section id="approccio" class="py-20 md:py-32 section-bg-gradient">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-darker mb-4">Il Mio Approccio</h2>
+                    <p class="text-lg text-text-dark/90 max-w-3xl mx-auto mb-16">
+                        Un percorso psicologico è un viaggio che facciamo insieme. Ecco le tappe principali che seguiremo per raggiungere i tuoi obiettivi.
+                    </p>
+                </div>
+                <div class="timeline space-y-8">
+                    <!-- Step 1 -->
+                    <div class="reveal step-card relative pl-24">
+                        <div class="section-icon absolute left-0 top-0"><span class="material-symbols-rounded">mark_chat_read</span></div>
+                        <h3 class="font-bold text-xl text-primary-darker mb-2">Primo Contatto</h3>
+                        <p>Puoi contattarmi via email o telefono. Fisseremo un primo colloquio conoscitivo, online o in studio, per esplorare la tua richiesta.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="reveal step-card relative pl-24" style="transition-delay: 100ms;">
+                        <div class="section-icon absolute left-0 top-0"><span class="material-symbols-rounded">plagiarism</span></div>
+                        <h3 class="font-bold text-xl text-primary-darker mb-2">Valutazione</h3>
+                        <p>Dedicheremo i primi incontri alla conoscenza e all'analisi del problema, se necessario tramite una valutazione psicodiagnostica o neuropsicologica.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="reveal step-card relative pl-24" style="transition-delay: 200ms;">
+                        <div class="section-icon absolute left-0 top-0"><span class="material-symbols-rounded">route</span></div>
+                        <h3 class="font-bold text-xl text-primary-darker mb-2">Percorso</h3>
+                        <p>Insieme, definiremo gli obiettivi e progetteremo un percorso personalizzato (sostegno, riabilitazione, parent training) basato sulle tue esigenze.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spazio Illustrazione -->
+        <div class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="reveal bg-primary-light/50 rounded-xl h-64 md:h-80 w-full flex items-center justify-center">
+                    <p class="text-primary-dark">Spazio per illustrazione a tema terapia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sezione Su di Me -->
+        <section id="chi-sono" class="py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-6xl grid md:grid-cols-5 gap-12 md:gap-16 items-center">
+                <div class="reveal md:col-span-2">
+                     <img src="https://placehold.co/800x1000/F9EBE4/8F6859?text=Virginia+Berlose" alt="Foto professionale di Virginia Berlose" class="rounded-xl w-full h-auto object-cover">
+                </div>
+                <div class="reveal text-left md:col-span-3" style="transition-delay: 100ms;">
+                     <h2 class="text-3xl md:text-4xl font-bold text-primary-darker mb-6">Su di Me</h2>
+                     <div class="text-lg text-text-dark/90 space-y-4">
+                        <p>
+                           Sono una Psicologa specializzata in Neuroscienze e Riabilitazione Neuropsicologica, attualmente in formazione come Psicoterapeuta. Il mio obiettivo è aiutare le persone a comprendersi meglio, a scoprire le proprie risorse e a superare le difficoltà emotive, relazionali e cognitive che possono incontrare nel corso della vita.
+                        </p>
+                        <p>
+                           Credo in un approccio basato sull'empatia, sull'ascolto non giudicante e sulla collaborazione. Lavoro per creare un ambiente sicuro in cui bambini, adolescenti e adulti possano sentirsi accolti e liberi di esplorare il proprio mondo interiore.
+                        </p>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Contatti e Sedi Unificata -->
+        <section id="contatti" class="py-20 md:py-32 section-bg-gradient-inverted">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center reveal max-w-4xl mx-auto">
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-darker mb-12">Contatti e Sedi</h2>
+
+                    <div class="grid md:grid-cols-2 gap-10 md:gap-12 mb-16 md:mb-20 items-start">
+                        <!-- Sede Ferrara -->
+                        <div class="text-center md:border-r md:border-primary-medium md:pr-10">
+                            <h3 class="text-2xl font-bold text-primary-darker mb-2">Ferrara</h3>
+                            <p class="text-text-dark mb-1">presso <strong>Studio Fonè</strong></p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Via+Vasco+Zappaterra,+13/7,+44122+Ferrara+FE" target="_blank" class="text-text-dark/90 block hover:text-primary-darker transition-colors duration-300">
+                                Via Vasco Zappaterra, 13/7, 44122 Ferrara FE
+                            </a>
+                        </div>
+
+                        <!-- Sede Lendinara -->
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-primary-darker mb-2">Lendinara (RO)</h3>
+                            <p class="text-text-dark mb-1">presso <strong>Atlas Centro di Fisioterapia e Medicina Integrata</strong></p>
+                             <a href="https://www.google.com/maps/search/?api=1&query=Via+Argine+Sinistro,+4,+45026+Lendinara+RO" target="_blank" class="text-text-dark/90 block hover:text-primary-darker transition-colors duration-300">
+                               Via Argine Sinistro, 4, 45026 Lendinara RO
+                            </a>
+                        </div>
+                    </div>
+
+                     <!-- Separator -->
+                     <div class="w-24 h-px bg-primary-light mx-auto mb-10"></div>
+
+                     <p class="text-lg text-text-dark/90 max-w-2xl mx-auto mb-8">
+                        Per informazioni o per fissare un primo appuntamento, puoi contattarmi telefonicamente o via email.
+                     </p>
+                     <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-lg">
+                        <a href="tel:+393466045612" class="inline-flex items-center space-x-3 font-semibold text-primary-darker hover:text-primary-dark transition-colors">
+                            <span class="material-symbols-rounded">call</span>
+                            <span>+39 346 604 5612</span>
+                        </a>
+                        <a href="mailto:virginia.berlose@gmail.com" class="inline-flex items-center space-x-3 font-semibold text-primary-darker hover:text-primary-dark transition-colors">
+                            <span class="material-symbols-rounded">email</span>
+                            <span>virginia.berlose@gmail.com</span>
+                        </a>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-alt border-t border-primary-light/30">
+        <div class="container mx-auto px-6 py-8 text-center text-primary-dark">
+            <p class="text-sm">&copy; <span id="current-year"></span> Dott.ssa Virginia Berlose. Tutti i diritti riservati.</p>
+            <p class="text-sm mt-2">P.IVA 02103870388 | Albo degli psicologi dell’Emilia-Romagna n°8164/Sez. A</p>
+        </div>
+    </footer>
+
+    <!-- Script per le animazioni e anno -->
+    <script>
+        // Animazioni reveal on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => { observer.observe(el); });
+
+        // Anno dinamico nel footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
