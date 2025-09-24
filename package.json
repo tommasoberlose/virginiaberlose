@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Sito web per Dott.ssa Virginia Berlose",
   "scripts": {
-    "build": "tailwindcss -i ./input.css -o ./pages/output.css",
-    "watch": "tailwindcss -i ./input.css -o ./output.css --watch"
+    "build": "tailwindcss -i ./input.css -o ./docs/output.css",
+    "watch": "tailwindcss -i ./input.css -o ./docs/output.css --watch"
   },
   "keywords": [],
   "author": "Tommaso Berlose",
