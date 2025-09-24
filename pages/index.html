@@ -19,8 +19,11 @@
     <meta property="og:url" content="https://www.virginiaberlose.it"> <!-- Sostituisci con il tuo URL finale -->
     <meta property="og:image" content="https://placehold.co/1200x630/F9EBE4/8F6859?text=Dott.ssa+Virginia+Berlose"> <!-- Sostituisci con un URL di un'immagine rappresentativa -->
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Per sviluppo rapido: decommenta la riga sotto per usare il CDN di Tailwind -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <!-- Per produzione: questo file viene generato con 'npm run build' -->
+    <link href="output.css" rel="stylesheet">
 
     <!-- Google Fonts: Inter & Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +33,7 @@
     <!-- Google Material Symbols (Rounded) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <!-- Stili personalizzati -->
+    <!-- Stili personalizzati (verranno processati da Tailwind) -->
     <style>
         :root {
             --cream: #FDFBF5;
@@ -185,15 +188,11 @@
                 </a>
             </div>
 
-            <!-- Right Side: Contacts -->
-            <div class="flex items-center space-x-6">
-                <a href="#contatti" class="flex items-center space-x-2 transition-colors duration-300">
-                    <span class="material-symbols-rounded">location_on</span>
-                    <span>Dove ricevo</span>
-                </a>
-                <a href="tel:+393466045612" class="flex items-center space-x-2 transition-colors duration-300">
-                    <span class="material-symbols-rounded">call</span>
-                    <span>+39 346 604 5612</span>
+            <!-- Right Side: CTA Button -->
+            <div>
+                <a href="#contatti" class="bg-primary-light hover:bg-primary-medium text-primary-darker font-semibold py-2 px-4 rounded-full transition-colors duration-300 text-sm flex items-center space-x-2">
+                     <span>Contattami</span>
+                     <span class="material-symbols-rounded text-base">arrow_forward</span>
                 </a>
             </div>
         </div>
@@ -204,7 +203,7 @@
         <div class="text-center max-w-4xl mx-auto z-10 relative">
             <div class="reveal visible">
                 <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-[--primary-darker] mb-4">
-                    Dott.ssa Virginia Berlose
+                    Dott.ssa <br class="md:hidden"> Virginia Berlose
                 </h1>
                 <p class="text-xl md:text-2xl text-primary-darker font-medium mb-8">
                     Psicologa e specialista in Neuropsicologia | Età Evolutiva e Adulti
@@ -270,6 +269,14 @@
         <!-- Sezione Il Mio Approccio -->
         <section id="approccio" class="py-20 md:py-32 section-bg-gradient">
             <div class="container mx-auto px-6 max-w-5xl">
+
+                <!-- Spazio Illustrazione -->
+                <div class="mb-16 md:mb-24">
+                    <div class="reveal bg-primary-light/50 rounded-xl h-64 md:h-80 w-full flex items-center justify-center">
+                        <p class="text-primary-dark">Spazio per illustrazione a tema terapia</p>
+                    </div>
+                </div>
+
                 <div class="text-center reveal">
                     <h2 class="text-3xl md:text-4xl font-bold text-primary-darker mb-4">Il Mio Approccio</h2>
                     <p class="text-lg text-text-dark/90 max-w-4xl mx-auto mb-16">
@@ -281,32 +288,23 @@
                     <div class="reveal step-card relative pl-24">
                         <div class="section-icon absolute left-0 top-0"><span class="material-symbols-rounded">question_answer</span></div>
                         <h3 class="font-bold text-xl text-primary-darker mb-2">Primo Contatto</h3>
-                        <p>Puoi contattarmi via email o telefono. Fisseremo un primo colloquio conoscitivo, online o in studio, per esplorare la tua richiesta.</p>
+                        <p class="text-text-dark/90">Il primo passo è un colloquio conoscitivo, un momento fondamentale per accogliere la tua richiesta in uno spazio protetto e non giudicante. Questo incontro ci permetterà di esplorare insieme le tue difficoltà, le tue aspettative e di capire come posso esserti d'aiuto.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="reveal step-card relative pl-24" style="transition-delay: 100ms;">
                         <div class="section-icon absolute left-0 top-0"><span class="material-symbols-rounded">psychology</span></div>
                         <h3 class="font-bold text-xl text-primary-darker mb-2">Valutazione</h3>
-                        <p>Dedicheremo i primi incontri alla conoscenza e all'analisi del problema, se necessario tramite una valutazione psicodiagnostica o neuropsicologica.</p>
+                        <p class="text-text-dark/90">Dedicheremo alcuni incontri all'approfondimento della situazione. Attraverso colloqui clinici ed eventualmente l'utilizzo di strumenti psicodiagnostici, tracceremo un quadro completo delle tue risorse e delle aree di fragilità per porre le basi per un intervento mirato.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="reveal step-card relative pl-24" style="transition-delay: 200ms;">
                         <div class="section-icon absolute left-0 top-0"><span class="material-symbols-rounded">spa</span></div>
                         <h3 class="font-bold text-xl text-primary-darker mb-2">Percorso</h3>
-                        <p>Insieme, definiremo gli obiettivi e progetteremo un percorso personalizzato (sostegno, riabilitazione, parent training) basato sulle tue esigenze.</p>
+                        <p class="text-text-dark/90">Una volta definiti gli obiettivi, progetteremo insieme un percorso su misura per te. Lavoreremo in modo collaborativo e flessibile per farti scoprire nuove strategie e risorse interiori, monitorando i progressi verso un benessere concreto e duraturo.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Spazio Illustrazione -->
-        <div class="py-16 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="reveal bg-primary-light/50 rounded-xl h-64 md:h-80 w-full flex items-center justify-center">
-                    <p class="text-primary-dark">Spazio per illustrazione a tema terapia</p>
-                </div>
-            </div>
-        </div>
 
         <!-- Sezione Su di Me -->
         <section id="chi-sono" class="py-16 md:py-24">
@@ -339,7 +337,9 @@
                         <!-- Sede Ferrara -->
                         <div class="text-center md:border-r md:border-primary-medium md:pr-10">
                             <h3 class="text-2xl font-bold text-primary-darker mb-2">Ferrara</h3>
-                            <p class="text-text-dark mb-1">presso <strong>Studio Fonè</strong></p>
+                            <p class="text-text-dark mb-2">
+                                Come parte integrante dell'equipe <strong>Studio Fonè</strong>
+                            </p>
                             <a href="https://www.google.com/maps/search/?api=1&query=Via+Vasco+Zappaterra,+13/7,+44122+Ferrara+FE" target="_blank" class="text-text-dark/90 block hover:text-primary-darker transition-colors duration-300">
                                 Via Vasco Zappaterra, 13/7, 44122 Ferrara FE
                             </a>
