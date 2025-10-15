@@ -907,6 +907,10 @@ video {
   padding-bottom: 6rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pb-40 {
   padding-bottom: 10rem;
 }
@@ -1101,8 +1105,8 @@ video {
     flex-direction: row;
   }
 
-  .md\:gap-12 {
-    gap: 3rem;
+  .md\:gap-0 {
+    gap: 0px;
   }
 
   .md\:gap-16 {
@@ -1127,15 +1131,6 @@ video {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .md\:border-r {
-    border-right-width: 1px;
-  }
-
-  .md\:border-primary-medium {
-    --tw-border-opacity: 1;
-    border-color: rgb(232 187 175 / var(--tw-border-opacity, 1));
-  }
-
   .md\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1151,10 +1146,6 @@ video {
 
   .md\:pb-60 {
     padding-bottom: 15rem;
-  }
-
-  .md\:pr-10 {
-    padding-right: 2.5rem;
   }
 
   .md\:pt-40 {
